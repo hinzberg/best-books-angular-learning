@@ -13,13 +13,17 @@
 
   <table>
     <thead>
+        <th>ISBN</th>
         <th>Title</th>
         <th>Autor</th>
+        <th>Pages</th>
     </thead>
     <tbody>
         <tr *ngFor="let book of books">
+            <td>{{ book.ISBN }}</td>
             <td>{{ book.Title }}</td>
             <td>{{ book.Autor }}</td>
+            <td>{{ book.NumberOfPages }}</td>
         </tr>
     </tbody>
 </table>

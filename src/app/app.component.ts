@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Book } from './Classes/Book'
 import { Interface } from 'readline';
 
 @Component({
@@ -14,17 +15,12 @@ import { Interface } from 'readline';
 export class AppComponent {
   title = 'Best Books';
   tagline = 'Come in and read!'
-  books: Book[] = [
-    {Title:"Foundation", Autor: "Asimov, Isaac"},
-    {Title: "Rendezvous with Rama", Autor: "Clark, Arthur C."},
-    {Title: "The dying Earth", Autor: "Vance, Jack"},
-    {Title: "John Carter of Mars", Autor: "Burroughs, E.R."},
-    {Title: "Dune", Autor: "Herbert, Frank"},
-    {Title: "War of the Worlds", Autor: "Wells, H.G."}
-  ];
-}
+    
+  books = [ new Book("Foundation","Asimov, Isaac", "3-453-07988-4", 450),
+            new Book("Rendezvous with Rama", "Clark, Arthur C.", "8-808-40483-2", 310),
+            new Book("The dying Earth","Vance, Jack", "1-946-18452-9", 250),
+            new Book("Dune","Herbert, Frank", "3-555-74837-5", 650),
+            new Book("War of the Worlds", "Wells, H.G.", "1-277-18988-3", 210)
+          ] ;
 
-export interface Book {
-  Title: string;
-  Autor: string;
 }

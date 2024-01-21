@@ -23,3 +23,16 @@
     width: 60px;
     text-align: right;
 }
+
+.infoRow {
+    width: 60px;
+}
+
+.infoButton {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    border: 0px;
+    font-size: 0.9rem;
+    width: 50px;
+}

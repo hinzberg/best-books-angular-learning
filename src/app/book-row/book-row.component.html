@@ -5,6 +5,9 @@
             <td class="titleRow">{{ book.Title }}</td>
             <td class="autorRow">{{ book.Autor }}</td>
             <td class="pagesRow">{{ book.NumberOfPages }}</td>
+            <td class="infoRow">
+                <button class="infoButton" (click)="showInfo()">Info</button>
+            </td>
         </tr>
     </tbody>
 </table>

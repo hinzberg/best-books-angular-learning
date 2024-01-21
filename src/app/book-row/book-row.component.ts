@@ -11,6 +11,11 @@ import { Book } from '../Classes/Book';
 
 export class BookRowComponent {
   @Input() book : Book = new Book("","","",0);
+
+  showInfo() {
+    let message: string = this.book.Title + " by " + this.book.Autor + ", (" + this.book.NumberOfPages + " pages)"; 
+    alert(message); 
+  }
 }
 
 

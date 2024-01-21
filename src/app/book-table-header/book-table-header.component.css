@@ -1,0 +1,24 @@
+td {
+    font-size: 1.1rem;
+    padding: 5px;
+    border: 0px;
+    background-color:brown;
+    color:blanchedalmond;
+    width: 160px;
+}
+
+.isbnRow {
+    width: 160px;
+}
+
+.titleRow {
+    width: 200px;
+}
+
+.autorRow {
+    width: 180px;
+}
+
+.pagesRow {
+    width: 60px;    
+}

@@ -1,34 +1,19 @@
-
 <main class="pageMain">
-  <div class="content">
-    <div>
-      <h1>Hello, Welcome to {{title}}</h1>
-      <h2>{{tagline}}</h2>
-    </div>
-  </div>
+  <h1>Hello, Welcome to {{title}}</h1>
+  <h2>{{tagline}}</h2>
 </main>
 
-<div class="pageContent">
+<div class="bookTableDiv">
 
+  <h2 class="tableHeadline">Books</h2>
 
-  <table>
-    <thead>
-        <th>ISBN</th>
-        <th>Title</th>
-        <th>Autor</th>
-        <th>Pages</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let book of books">
-            <td>{{ book.ISBN }}</td>
-            <td>{{ book.Title }}</td>
-            <td>{{ book.Autor }}</td>
-            <td>{{ book.NumberOfPages }}</td>
-        </tr>
-    </tbody>
-</table>
-
+  <app-book-table-header></app-book-table-header>
   
+  <div *ngFor="let book of books">
+    <app-book-row [book]=book></app-book-row>
+  </div>
+
+
 </div>
 
 <router-outlet></router-outlet>

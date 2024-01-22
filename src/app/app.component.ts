@@ -4,12 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { Book } from './Classes/Book'
 import { Interface } from 'readline';
 import { BookRowComponent } from './book-row/book-row.component';
-import { BookTableHeaderComponent } from './book-table-header/book-table-header.component';
+import { PageheaderComponent } from './pageheader/pageheader.component';
+import { BookTableComponent } from './book-table/book-table.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, BookTableHeaderComponent, BookRowComponent],
+  imports: [CommonModule, RouterOutlet, BookTableComponent, PageheaderComponent,  BookRowComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

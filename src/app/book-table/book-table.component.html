@@ -1,0 +1,16 @@
+<table>
+    <tbody>
+        <tr>
+            <th class="isbnRow">ISBN</th>
+            <th class="titleRow">Title</th>
+            <th class="autorRow">Autor</th>
+            <th class="pagesRow">Pages</th>
+            <th class="infoRow">Info</th>
+        </tr>
+        <tr *ngFor="let book of books">
+            <app-book-row [book]=book></app-book-row>
+        </tr>
+    </tbody>
+</table>
+
+

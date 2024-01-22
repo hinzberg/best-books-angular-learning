@@ -29,10 +29,11 @@
 }
 
 .infoButton {
-    background-color: brown;
-    color: white;
+     color: brown;
+     background-color:blanchedalmond;
     text-align: center;
     border: 0px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     width: 50px;
+    cursor:pointer;
 }

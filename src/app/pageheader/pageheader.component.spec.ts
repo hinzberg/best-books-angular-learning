@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookTableHeaderComponent } from './book-table-header.component';
+import { PageheaderComponent } from './pageheader.component';
 
-describe('BookTableHeaderComponent', () => {
-  let component: BookTableHeaderComponent;
-  let fixture: ComponentFixture<BookTableHeaderComponent>;
+describe('PageheaderComponent', () => {
+  let component: PageheaderComponent;
+  let fixture: ComponentFixture<PageheaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BookTableHeaderComponent]
+      imports: [PageheaderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BookTableHeaderComponent);
+    fixture = TestBed.createComponent(PageheaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

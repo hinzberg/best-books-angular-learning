@@ -1,18 +1,11 @@
-<main class="pageMain">
-  <h1>Hello, Welcome to {{title}}</h1>
-  <h2>{{tagline}}</h2>
-</main>
+
+<app-pageheader></app-pageheader>
 
 <div class="bookTableDiv">
 
   <h2 class="tableHeadline">Books</h2>
 
-  <app-book-table-header></app-book-table-header>
-  
-  <div *ngFor="let book of books">
-    <app-book-row [book]=book></app-book-row>
-  </div>
-
+  <app-book-table [books]="books"></app-book-table>
 
 </div>
 

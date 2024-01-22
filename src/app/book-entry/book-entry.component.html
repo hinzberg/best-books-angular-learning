@@ -1,1 +1,27 @@
-<p>book-entry works!</p>
+<div class="grayDiv" >
+    
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="" formControlName="title">
+        <label for="autor">Autor</label>
+        <input type="text" id="autor" placeholder="" formControlName="autor">
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn"  placeholder="" formControlName="isbn">
+        <label for="pages">Number of Pages</label>
+        <input type="text" id="pages" placeholder="" formControlName="pages">
+        
+        <p>
+            <button class="button" type="submit">Add Book</button>
+        </p>
+                
+        <p>{{ dummy }}</p>
+        <p> Input Data: 
+            {{checkoutForm.value.title}}
+            {{checkoutForm.value.autor}}
+            {{checkoutForm.value.isbn}}
+            {{checkoutForm.value.pages}}
+        </p>    
+    </form>
+</div>
+
+

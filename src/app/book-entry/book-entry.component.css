@@ -1,0 +1,32 @@
+.grayDiv {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-sizing: inherit;
+    position: relative;
+    background-color: lightgray;
+    text-align: center;        
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+
+label {
+  font-size: 1.1rem;
+  width: 150px;
+  display: flex;
+  color: brown;
+  margin-left: 8px;
+}
+
+  input {
+    font-size: 1.1rem;
+    margin: 5px;
+    color: brown;
+    border-color: transparent;
+  }

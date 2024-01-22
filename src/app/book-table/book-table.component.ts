@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Book } from '../Classes/Book'
-import { BookRowComponent } from '../book-row/book-row.component';
 
 @Component({
   selector: 'app-book-table',
   standalone: true,
-  imports: [CommonModule , BookRowComponent] ,
+  imports: [CommonModule] ,
   templateUrl: './book-table.component.html',
   styleUrl: './book-table.component.css'
 })
@@ -19,4 +18,9 @@ export class BookTableComponent {
   new Book("War of the Worlds", "Wells, H.G.", "1-277-18988-3", 210),
   new Book("The Demolished Man", "Bester, Alfred", "7-483-28911-9", 195)
   ];
+
+  showInfo(book : Book) {
+    let message: string = book.Title + " by " + book.Autor + ", (" + book.NumberOfPages + " pages)"; 
+    alert(message); 
+  }
 }

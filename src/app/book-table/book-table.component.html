@@ -1,21 +1,26 @@
-<div class="grayDiv">
-    <h2>All our books</h2>
-</div>
-
 <div class="bookTableDiv">
-<table>
-    <tbody>
+    
+    <h2>All our books</h2>
+    
+    <table>
         <tr>
-            <th class="isbnRow">ISBN</th>
-            <th class="titleRow">Title</th>
-            <th class="autorRow">Autor</th>
-            <th class="pagesRow">Pages</th>
-            <th class="infoRow">Info</th>
+            <td class="isbnRow">ISBN</td>
+            <td class="titleRow">Title</td>
+            <td class="autorRow">Autor</td>
+            <td class="pagesRow">Pages</td>
+            <td class="infoRow">Info</td>
         </tr>
+        
         <tr *ngFor="let book of books">
-            <app-book-row [book]=book></app-book-row>
+            <!--app-book-row [book]=book></app-book-row-->
+            <td class="cell">{{ book.ISBN }}</td>
+            <td class="cell">{{ book.Title }}</td>
+            <td class="cell">{{ book.Autor }}</td>
+            <td class="cell">{{ book.NumberOfPages }}</td>
+            <td class="cell">
+                <button class="infoButton" (click)="showInfo(book)">Info</button>
+            </td>
         </tr>
-    </tbody>
-</table>
-
+        
+    </table>
 </div>

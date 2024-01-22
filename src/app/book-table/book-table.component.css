@@ -29,13 +29,12 @@ h2 {
     color: brown;
 }
 
-th{
+td{
     font-size: 1.1rem;
     padding: 5px;
     border: 0px;
     background-color:brown;
     color:blanchedalmond;
-    width: 160px;
 }
 
 .isbnRow {
@@ -56,4 +55,22 @@ th{
 
 .infoRow {
     width: 60px;
+}
+
+.cell {
+    font-size: 1.1rem;
+    padding: 5px;
+    background-color:blanchedalmond;
+    color:brown;
+    border-radius: 5px;            
+}
+
+.infoButton {
+     color: brown;
+     background-color:blanchedalmond;
+    text-align: center;
+    border: 0px;
+    font-size: 1.1rem;
+    width: 50px;
+    cursor:pointer;
 }

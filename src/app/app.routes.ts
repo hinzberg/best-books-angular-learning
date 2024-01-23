@@ -6,5 +6,6 @@ import { PageheaderComponent } from './pageheader/pageheader.component';
 export const routes: Routes = [
     { path: '', component: BookTableComponent },
     { path: 'all-books', component: BookTableComponent },
-    { path: 'book-entry', component: BookEntryComponent }
+    { path: 'book-entry', component: BookEntryComponent },
+    { path: 'book-entry/:bookId', component: BookEntryComponent }
 ];

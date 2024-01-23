@@ -8,7 +8,8 @@
             <td class="titleRow">Title</td>
             <td class="autorRow">Autor</td>
             <td class="pagesRow">Pages</td>
-            <td class="infoRow">Info</td>
+            <td class="infoRow">Delete</td>
+            <td class="infoRow">Edit</td>
         </tr>
         <tr *ngFor="let book of bookservice.books">
             <td class="cell">{{ book.ISBN }}</td>
@@ -16,7 +17,10 @@
             <td class="cell">{{ book.Autor }}</td>
             <td class="cell">{{ book.NumberOfPages }}</td>
             <td class="cell">
-                <button class="infoButton" (click)="showInfo(book)">Info</button>
+                <a class="tableButton cancelLink" (click)="deleteBook(book)">Delete</a>
+            </td>
+            <td class="cell">
+                <a class="submitLink"  [routerLink]="['/book-entry', book.Id]">Edit</a>  
             </td>
         </tr>  
         </tbody>      

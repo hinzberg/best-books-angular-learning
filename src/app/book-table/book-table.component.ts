@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Book } from '../Classes/Book'
 import { BookService } from '../book.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-book-table',
   standalone: true,
-  imports: [CommonModule] ,
+  imports: [CommonModule, RouterModule] ,
   templateUrl: './book-table.component.html',
   styleUrl: './book-table.component.css'
 })
@@ -16,9 +17,7 @@ export class BookTableComponent {
   constructor(public bookservice : BookService ) {
   }
 
-
-  showInfo(book : Book) {
-    let message: string = book.Title + " by " + book.Autor + ", (" + book.NumberOfPages + " pages)"; 
-    alert(message); 
+  deleteBook(book : Book) {
+    this.bookservice.delete(book);
   }
 }

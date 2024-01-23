@@ -7,7 +7,6 @@
     padding-bottom: 0px;
     box-sizing: inherit;
     position: relative;
-    background-color: lightgray;
     text-align: center;    
   }
 
@@ -65,12 +64,24 @@ td{
     border-radius: 5px;            
 }
 
-.infoButton {
-     color: brown;
+.tableButton {
+    color: brown;
+    background-color:blanchedalmond;
+   text-align: center;
+   border: 0px;
+   font-size: 1.1rem;
+   width: 70px;
+   cursor:pointer;
+}
+
+.cancelLink {
+     color: red;
      background-color:blanchedalmond;
-    text-align: center;
-    border: 0px;
-    font-size: 1.1rem;
-    width: 50px;
-    cursor:pointer;
+     text-decoration: none;
+}
+
+.submitLink {
+    color: blue;
+    background-color:blanchedalmond;
+    text-decoration: none;
 }

@@ -11,16 +11,18 @@
         <input type="text" id="pages" placeholder="" formControlName="pages">
         
         <p>
-            <button class="button" type="submit">Add Book</button>
+            <button class="cancelButton" (click)="cancel()">Cancel</button>
+            <button class="submitButton" type="submit">Add Book</button>
         </p>
                 
         <p>{{ dummy }}</p>
-        <p> Input Data: 
+        <!-- Single Source of Truth-->
+        <!--p> Input Data: 
             {{checkoutForm.value.title}}
             {{checkoutForm.value.autor}}
             {{checkoutForm.value.isbn}}
             {{checkoutForm.value.pages}}
-        </p>    
+        </p-->    
     </form>
 </div>
 

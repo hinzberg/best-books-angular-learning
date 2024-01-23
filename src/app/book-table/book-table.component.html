@@ -10,7 +10,7 @@
             <td class="pagesRow">Pages</td>
             <td class="infoRow">Info</td>
         </tr>
-        <tr *ngFor="let book of books">
+        <tr *ngFor="let book of bookservice.books">
             <td class="cell">{{ book.ISBN }}</td>
             <td class="cell">{{ book.Title }}</td>
             <td class="cell">{{ book.Autor }}</td>

@@ -1,8 +1,8 @@
 <div class="bookTableDiv">
-    
+
     <h2>All our books</h2>
-    
     <table>
+        <tbody>
         <tr>
             <td class="isbnRow">ISBN</td>
             <td class="titleRow">Title</td>
@@ -10,9 +10,7 @@
             <td class="pagesRow">Pages</td>
             <td class="infoRow">Info</td>
         </tr>
-        
         <tr *ngFor="let book of books">
-            <!--app-book-row [book]=book></app-book-row-->
             <td class="cell">{{ book.ISBN }}</td>
             <td class="cell">{{ book.Title }}</td>
             <td class="cell">{{ book.Autor }}</td>
@@ -20,7 +18,7 @@
             <td class="cell">
                 <button class="infoButton" (click)="showInfo(book)">Info</button>
             </td>
-        </tr>
-        
+        </tr>  
+        </tbody>      
     </table>
 </div>

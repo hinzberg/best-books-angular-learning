@@ -22,11 +22,9 @@ export class BookEntryComponent {
     pages : new FormControl('')
   });
 
-  dummy = "xxx"
+  dummy = ""
 
   onSubmit() {
-   
-    this.dummy = "Hello World";
-
+       this.dummy = "Saved";
   }
 }

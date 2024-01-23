@@ -4,6 +4,7 @@ import { BookTableComponent } from './book-table/book-table.component';
 import { PageheaderComponent } from './pageheader/pageheader.component';
 
 export const routes: Routes = [
+    { path: '', component: BookTableComponent },
     { path: 'all-books', component: BookTableComponent },
     { path: 'book-entry', component: BookEntryComponent }
 ];

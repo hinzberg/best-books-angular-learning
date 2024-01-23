@@ -100,6 +100,12 @@
     margin-top: 1.5rem;
   }
 
+  .outlet {
+    background-color: red;
+    padding: 1px;
+    margin: 1px;
+  }
+
   @media screen and (max-width: 650px) {
     .content {
       flex-direction: column;

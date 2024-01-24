@@ -1,6 +1,9 @@
 <div class="bookTableDiv">
 
     <h2>All our books</h2>
+
+    <app-book-filter></app-book-filter>    
+
     <table>
         <tbody>
         <tr>
@@ -11,7 +14,7 @@
             <td class="infoRow">Delete</td>
             <td class="infoRow">Edit</td>
         </tr>
-        <tr *ngFor="let book of bookservice.books">
+        <tr *ngFor="let book of bookservice.filterdBooks">
             <td class="cell">{{ book.ISBN }}</td>
             <td class="cell">{{ book.Title }}</td>
             <td class="cell">{{ book.Autor }}</td>

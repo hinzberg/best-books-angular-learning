@@ -1,0 +1,5 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <button *ngIf="bookservice.isFiltered" class="cancelButton" (click)="cancel()">X</button>
+    <input type="text" id="filterText" placeholder="Enter filter text here ..." formControlName="filterText">
+    <button class="submitButton" type="submit">Filter</button>
+</form>

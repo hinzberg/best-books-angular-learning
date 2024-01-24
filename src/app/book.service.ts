@@ -17,6 +17,9 @@ export class BookService {
     new Book("Ender's Game", "Scott Card, Orson", "6-845-18927-6", 195)
   ];
 
+  filterdBooks = this.books;
+  isFiltered : boolean = false;
+
   constructor() { }
 
   add(book: Book) {
@@ -24,7 +27,7 @@ export class BookService {
   }
 
   addOrUpdate(book: Book) {
-    let index = this.books.findIndex(d => d.Id === book.Id); 
+    let index = this.books.findIndex(d => d.Id === book.Id);
     if (index === -1) {
       // alert("This is a new book!");
       this.books.push(book)
@@ -49,5 +52,29 @@ export class BookService {
   getById(id: string): Book {
     let b = this.books.filter(i => i.Id === id)[0];
     return b;
+  }
+
+  filter(text: string) {
+    if (text === "") {
+      this.isFiltered = false;
+      this.filterdBooks = this.books;
+    } else {
+      this.filterdBooks = [];
+      this.isFiltered = true;
+      this.books.forEach(book => {
+
+        let lowerText = text.toLowerCase();
+        
+        if (book.Title.toLowerCase().includes(lowerText)) {
+          this.filterdBooks.push(book);          
+        }
+        else if (book.Autor.toLowerCase().includes(lowerText)) {
+          this.filterdBooks.push(book);          
+        }
+        else if (book.ISBN.toLowerCase().includes(lowerText)) {
+          this.filterdBooks.push(book);          
+        }
+      });
+    }
   }
 }

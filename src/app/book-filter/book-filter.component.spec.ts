@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageheaderComponent } from './pageheader.component';
+import { BookFilterComponent } from './book-filter.component';
 
-describe('PageheaderComponent', () => {
-  let component: PageheaderComponent;
-  let fixture: ComponentFixture<PageheaderComponent>;
+describe('BookFilterComponent', () => {
+  let component: BookFilterComponent;
+  let fixture: ComponentFixture<BookFilterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageheaderComponent]
+      imports: [BookFilterComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PageheaderComponent);
+    fixture = TestBed.createComponent(BookFilterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

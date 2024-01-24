@@ -5,11 +5,12 @@ import { Book } from './Classes/Book'
 import { Interface } from 'readline';
 import { PageheaderComponent } from './pageheader/pageheader.component';
 import { BookTableComponent } from './book-table/book-table.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, BookTableComponent, PageheaderComponent],
+  imports: [CommonModule, RouterOutlet, BookTableComponent, PageheaderComponent , PageFooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

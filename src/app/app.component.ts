@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Book } from './Classes/Book'
-import { Interface } from 'readline';
-import { PageheaderComponent } from './pageheader/pageheader.component';
-import { BookTableComponent } from './book-table/book-table.component';
-import { PageFooterComponent } from './page-footer/page-footer.component';
+import { PageheaderComponent } from './Components/page-header/page-header.component';
+import { BookTableComponent } from './Components/book-table/book-table.component';
+import { PageFooterComponent } from './Components/page-footer/page-footer.component';
 
 @Component({
   selector: 'app-root',

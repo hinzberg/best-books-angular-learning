@@ -1,9 +1,9 @@
 import { Component, Input} from '@angular/core';
-import { Book } from '../Classes/Book';
+import { Book } from '../../Classes/Book';
 import { FormBuilder, FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BookService } from '../book.service';
+import { BookService } from '../../Services/book.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 

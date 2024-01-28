@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Book } from './Classes/Book'
+import { Book } from '../Classes/Book'
 
 @Injectable({
   providedIn: 'root'

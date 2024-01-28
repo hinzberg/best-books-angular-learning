@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-pageheader',
+  selector: 'app-page-header',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './pageheader.component.html',
-  styleUrl: './pageheader.component.css'
+  templateUrl: './page-header.component.html',
+  styleUrl: './page-header.component.css'
 })
 
 export class PageheaderComponent {

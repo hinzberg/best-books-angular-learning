@@ -1,14 +1,28 @@
 .grayDiv {
     width: 100%;
-    display: grid;
+    height: 100%;
+    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding-top: 0px;
     padding-bottom: 0px;
     box-sizing: inherit;
     position: relative;
-    text-align: center;        
+    text-align: center;
+    flex-flow: column;
+    height: 100%;    
   }
+
+.contentBorder {
+  background-color:transparent;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 0px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+  background: linear-gradient(180deg, rgb(255, 255, 255) -10%, rgb(71, 157, 255) 100%); 
+}
 
   form {
     margin-top: 20px;
@@ -16,19 +30,14 @@
 
 
 label {
-  font-size: 1.1rem;
-  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 600;
   display: flex;
-  color: brown;
-  margin-left: 8px;
+  color: black;
+  margin-left: 10px;
+  margin-top: 10px;    
 }
 
-  input {
-    font-size: 1.1rem;
-    margin: 5px;
-    color: brown;
-    border-color: transparent;
-  }
 
 
 

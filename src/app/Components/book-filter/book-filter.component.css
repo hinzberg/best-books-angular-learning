@@ -4,3 +4,7 @@ form {
     justify-content: center;
     margin-bottom: 10px;
 }
+
+.submitButton {
+    width: 15%;
+ }

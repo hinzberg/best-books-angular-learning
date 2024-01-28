@@ -2,37 +2,43 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: lightgray;
-  }
-
-  .submitButton {
-    font-size: 1.0rem;
-    margin: 5px;
-    color:darkgreen;
-    background-color: white;
-    width: 100px;
-    height: 28px;
-    border: 3px solid darkgreen;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  .cancelButton {
-    font-size: 1.0rem;
-    font-weight: 600;
-    margin: 5px;
-    color: red;
-    background: white;
-    width: 100px;
-    height: 28px;
-    border: 3px solid red;
-    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(225, 233, 255);
   }
 
   input {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 5px;
-    color: brown;
-    border-color: transparent;
+    margin-top: 2px;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+    height: 25px;
+  }
+
+  .submitButton {
+    font-size: 1.2rem;
+    margin: 5px;
+    color:darkgreen;
+    background-color: white;
     height: 28px;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+    font-weight: 400;
+    width: 45%;
+  }
+
+  .cancelButton {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 5px;
+    color: red;
+    background: white;
+    height: 28px;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 45%;
   }

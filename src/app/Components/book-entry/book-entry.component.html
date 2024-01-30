@@ -9,21 +9,13 @@
             <label for="isbn">ISBN</label>
             <input type="text" id="isbn" placeholder="" formControlName="isbn">
             <label for="pages">Number of Pages</label>
-            <input type="text" id="pages" placeholder="" formControlName="pages">
+            <input type="number" id="pages" placeholder="" formControlName="pages">
 
             <p>
                 <button class="cancelButton" (click)="cancel()">Cancel</button>
                 <button class="submitButton" type="submit">{{ addButtonText }}</button>
             </p>
-
-            <p>{{ dummy }}</p>
-            <!-- Single Source of Truth-->
-            <!--p> Input Data: 
-            {{checkoutForm.value.title}}
-            {{checkoutForm.value.autor}}
-            {{checkoutForm.value.isbn}}
-            {{checkoutForm.value.pages}}
-        </p-->
         </form>
     </div>
+    <p class="messageLabel">{{ message }}</p>
 </div>

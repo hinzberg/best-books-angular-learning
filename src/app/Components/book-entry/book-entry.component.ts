@@ -1,6 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { Book } from '../../Classes/Book';
-import { FormBuilder, FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BookService } from '../../Services/book.service';
@@ -20,10 +20,10 @@ export class BookEntryComponent {
     private selectedBook? : Book = undefined
     public addButtonText = "Add Book";
 
-    title = new FormControl('');
-    autor = new FormControl('');
-    isbn = new FormControl('');
-    pages = new FormControl('');
+    title = new FormControl('', [Validators.required]);
+    autor = new FormControl('', [Validators.required]);
+    isbn = new FormControl('', [Validators.required]);
+    pages = new FormControl('', [Validators.required]);
 
     checkoutForm = new FormGroup({
       title : this.title, 
@@ -47,9 +47,15 @@ export class BookEntryComponent {
     }  
   }
 
-  dummy = ""
+  public message : string = ""
 
   onSubmit() {
+
+     if (this.checkoutForm.valid === false) {
+      this.message = "Form incomplete!";
+      return;
+     } 
+
     let title = this.checkoutForm.value.title;
     let autor = this.checkoutForm.value.autor;
     let isbn = this.checkoutForm.value.isbn;
@@ -59,7 +65,7 @@ export class BookEntryComponent {
     // Lazy Validation. More to add
     if(isNaN(pa) || pages === "" )
     {
-      this.dummy = "Error";
+      this.message = "Error";
     }
     else
     {
@@ -74,7 +80,7 @@ export class BookEntryComponent {
         this.bookservice.addOrUpdate(book);
       }
 
-      this.dummy = "Saved";
+      this.message = "";
       this.router.navigate(['']);
     }
   }

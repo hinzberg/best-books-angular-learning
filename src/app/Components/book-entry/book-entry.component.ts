@@ -25,7 +25,7 @@ export class BookEntryComponent {
     isbn = new FormControl('', [Validators.required]);
     pages = new FormControl('', [Validators.required]);
 
-    checkoutForm = new FormGroup({
+    checkoutForm = new FormGroup<EntryForm>({
       title : this.title, 
       autor : this.autor, 
       isbn : this.isbn, 
@@ -33,13 +33,12 @@ export class BookEntryComponent {
   });
 
   constructor(public bookservice : BookService , public router : Router, private activatedRoute : ActivatedRoute) {
-
+ 
     let id = this.activatedRoute.snapshot.params['bookId'];
     if (id !== undefined) {
       this.selectedBook = bookservice.getById(id);
       if (this.selectedBook !== undefined) {
         this.title.setValue(this.selectedBook.Title);
-        this.autor.setValue(this.selectedBook.Autor);
         this.isbn.setValue(this.selectedBook.ISBN);
         this.pages.setValue(String(this.selectedBook.NumberOfPages));
         this.addButtonText = "Update";
@@ -88,4 +87,11 @@ export class BookEntryComponent {
   cancel() {
     this.router.navigate(['']);
 }
+}
+
+interface EntryForm {
+  title : FormControl<string | null>;
+  autor : FormControl<string | null>;
+  isbn : FormControl<string | null>;
+  pages : FormControl<string | null>;
 }

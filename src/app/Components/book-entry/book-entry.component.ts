@@ -16,51 +16,47 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class BookEntryComponent {
-
-    private selectedBook? : Book = undefined
-    public addButtonText = "Add Book";
-
-    title = new FormControl('', [Validators.required]);
-    autor = new FormControl('', [Validators.required]);
-    isbn = new FormControl('', [Validators.required]);
-    pages = new FormControl('', [Validators.required]);
-
-    checkoutForm = new FormGroup<EntryForm>({
-      title : this.title, 
-      autor : this.autor, 
-      isbn : this.isbn, 
-      pages : this.pages
+  
+  private selectedBook? : Book = undefined
+  public addButtonText = "Add Book";
+  
+  checkoutForm = new FormGroup<EntryForm>({
+    title : new FormControl('', [Validators.required]),
+    autor : new FormControl('', [Validators.required]),
+    isbn :new FormControl('', [Validators.required]),
+    pages : new FormControl('', [Validators.required])
   });
-
+  
   constructor(public bookservice : BookService , public router : Router, private activatedRoute : ActivatedRoute) {
- 
+    
     let id = this.activatedRoute.snapshot.params['bookId'];
     if (id !== undefined) {
       this.selectedBook = bookservice.getById(id);
       if (this.selectedBook !== undefined) {
-        this.title.setValue(this.selectedBook.Title);
-        this.isbn.setValue(this.selectedBook.ISBN);
-        this.pages.setValue(String(this.selectedBook.NumberOfPages));
+        this.checkoutForm.controls['autor'].setValue(this.selectedBook.Autor);
+        this.checkoutForm.controls['title'].setValue(this.selectedBook.Title);
+        this.checkoutForm.controls['isbn'].setValue(this.selectedBook.ISBN);
+        this.checkoutForm.controls['pages'].setValue(String(this.selectedBook.NumberOfPages));
         this.addButtonText = "Update";
       }
     }  
   }
-
+  
   public message : string = ""
-
+  
   onSubmit() {
-
-     if (this.checkoutForm.valid === false) {
+    
+    if (this.checkoutForm.valid === false) {
       this.message = "Form incomplete!";
       return;
-     } 
-
+    } 
+    
     let title = this.checkoutForm.value.title;
     let autor = this.checkoutForm.value.autor;
     let isbn = this.checkoutForm.value.isbn;
     let pages = this.checkoutForm.value.pages;
     let pa = Number(pages!)
-
+    
     // Lazy Validation. More to add
     if(isNaN(pa) || pages === "" )
     {
@@ -78,15 +74,15 @@ export class BookEntryComponent {
         let book = new Book(title!, autor!, isbn!, pa);
         this.bookservice.addOrUpdate(book);
       }
-
+      
       this.message = "";
       this.router.navigate(['']);
     }
   }
-
+  
   cancel() {
     this.router.navigate(['']);
-}
+  }
 }
 
 interface EntryForm {

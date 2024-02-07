@@ -14,7 +14,10 @@ export class BookService {
     new Book("Dune", "Herbert, Frank", "3-555-74837-5", 650),
     new Book("War of the Worlds", "Wells, H.G.", "1-277-18988-3", 210),
     new Book("The Demolished Man", "Bester, Alfred", "7-483-28911-9", 195),
-    new Book("Ender's Game", "Scott Card, Orson", "6-845-18927-6", 195)
+    new Book("Ender's Game", "Scott Card, Orson", "6-845-18927-6", 195),
+   // new Book("Fahrenheit 451", "Bradbury, Ray", "2-227-48372-4", 225),
+   // new Book("The Hitchhiker's Guide", "Adams, Douglas", "4-828-54324-4", 295),
+   // new Book("Hyperion", "Simmons, Dan", "1-123-99573-3", 295)
   ];
 
   filterdBooks = this.books;

@@ -1,0 +1,17 @@
+
+<div class="bookShelf">
+
+<div  *ngFor="let book of bookservice.filterdBooks">
+
+<div class="bookShelfItem">
+    <div>
+        {{ book.Title }}
+    </div> 
+    <div class="bookShelfItemAutor">
+        {{ book.Autor }}
+    </div>     
+</div>
+
+</div>
+
+</div>

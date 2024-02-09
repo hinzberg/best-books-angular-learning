@@ -28,22 +28,28 @@
     margin-bottom: 20px;
   }
 
+  table { 
+    border-spacing: 5px;
+
+}
+
 td{
     padding: 10px;
     border: 0px;
     color:white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     font-family: "Arial";  
-    background-color: #007aff80;
+    background-color: var(--primary-color);
+    
 }
 
 .isbnRow {
-    width: 160px;
+    width: 180px;
 }
 
 .titleRow {
-    width: 200px;
+    width: 240px;
 }
 
 .autorRow {
@@ -51,15 +57,19 @@ td{
 }
 
 .pagesRow {
-    width: 60px;    
+    width: 80px;    
+}
+
+.deleteRow {
+    width: 80px;    
 }
 
 .infoRow {
-    width: 60px;
+    width: 80px;
 }
 
 .cell {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -71,7 +81,6 @@ td{
 .tableButton {
    text-align: center;
    border: 0px;
-   font-size: 1.1rem;
    width: 70px;
    cursor:pointer;
 }

@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
+    --primary-color: #007aff;
+    --primary-green-color: green;
+    --secondary-green-color: darkgreen;
+    --primary-red-color: #ff3b30;
+    --secondary-red-color: darkred;
+    --button-text-color: white;
+
+
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9,9 +17,9 @@ body {
   }
 
   h1 {
-    font-size: 2.125rem;
+    font-size: 2.5em;
     font-weight: 400;
-    color: #007aff;
+    color: var(--primary-color);
     line-height: 100%;
     letter-spacing: -0.125rem;
     margin: 0;
@@ -19,8 +27,8 @@ body {
   }
 
   h2 {
-    font-size: 1.8rem;
-    color: #007aff;
+    font-size: 1.7em;
+    color: var(--primary-color);
     font-weight: 400;
     font-style: italic;
     line-height: 150%;
@@ -32,7 +40,7 @@ body {
     font-size: 1.2rem;
     margin: 5px;
     color: black;
-    border: 2px solid #007aff;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     padding-left: 10px;
     outline: none;
@@ -42,10 +50,10 @@ body {
   .submitButton {
     font-size: 1.2rem;
     margin: 5px;
-    color:white;
-    background-color: green;
+    color: var(--button-text-color);
+    background-color: var(--primary-green-color);
     height: 34px;
-    border: 2px solid green;
+    border: 2px solid var(--primary-green-color);
     border-radius: 5px;
     font-weight: 400;
     text-align: center;
@@ -53,24 +61,26 @@ body {
   }
 
   .submitButton:hover {
-    background-color: darkgreen;
-    border: 2px solid darkgreen;
+    background-color: var(--secondary-green-color);
+    border: 2px solid var(--secondary-green-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
 
   .cancelButton {
     font-size: 1.2rem;
     font-weight: 400;
     margin: 5px;
-    color: white;
-    background: #ff3b30;
+    color: var(--button-text-color);
+    background: var(--primary-red-color);
     height: 34px;
-    border: 2px solid #ff3b30;
+    border: 2px solid var(--primary-red-color);
     border-radius: 5px;
     text-align: center;
     font-family: "Arial";
   }
 
   .cancelButton:hover {
-    background-color: darkred;
-    border: 2px solid darkred;
+    background-color: var(--secondary-red-color);
+    border: 2px solid var(--secondary-red-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }

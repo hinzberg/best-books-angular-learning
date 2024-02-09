@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './book-shelf.component.html',
   styleUrl: './book-shelf.component.css'
 })
+
 export class BookShelfComponent {
 
   constructor(public bookservice : BookService ) {

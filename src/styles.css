@@ -1,86 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    --primary-color: #007aff;
-    --primary-green-color: green;
-    --secondary-green-color: darkgreen;
-    --primary-red-color: #ff3b30;
-    --secondary-red-color: darkred;
-    --button-text-color: white;
+  --primary-color: #007aff;
+  --primary-green-color: green;
+  --secondary-green-color: darkgreen;
+  --primary-red-color: #ff3b30;
+  --secondary-red-color: darkred;
+  --button-text-color: white;
+  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(233, 233, 255);
+  background-image: url("assets/images/bluebackground2.jpg");
+}
 
+h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--primary-color);
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+  font-family: "Arial";
+}
 
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background-color:rgb(233, 233, 255);
-    background-image: url("assets/images/bluebackground2.jpg");
-  }
+h2 {
+  font-size: 1.7em;
+  color: var(--primary-color);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 150%;
+  margin: 0;
+  font-family: "Arial";
+}
 
-  h1 {
-    font-size: 2.5em;
-    font-weight: 400;
-    color: var(--primary-color);
-    line-height: 100%;
-    letter-spacing: -0.125rem;
-    margin: 0;
-    font-family: "Arial";  
-  }
+input {
+  font-size: 1.2rem;
+  margin: 5px;
+  color: black;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  height: 28px;
+}
 
-  h2 {
-    font-size: 1.7em;
-    color: var(--primary-color);
-    font-weight: 400;
-    font-style: italic;
-    line-height: 150%;
-    margin: 0;
-    font-family: "Arial";
-  }
+.genericButton {
+  font-size: 1.2rem;
+  margin: 5px;
+  color: var(--primary-color);
+  background-color: white;
+  height: 34px;
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Arial";
+}
 
-  input {
-    font-size: 1.2rem;
-    margin: 5px;
-    color: black;
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-    padding-left: 10px;
-    outline: none;
-    height: 28px;
-  }
+.genericButton:hover {
+  color: var(--button-text-color);
+  background-color: var(--primary-color);
+  border: 2px solid white;
+}
 
-  .submitButton {
-    font-size: 1.2rem;
-    margin: 5px;
-    color: var(--button-text-color);
-    background-color: var(--primary-green-color);
-    height: 34px;
-    border: 2px solid var(--primary-green-color);
-    border-radius: 5px;
-    font-weight: 400;
-    text-align: center;
-    font-family: "Arial";
-  }
+.submitButton {
+  font-size: 1.2rem;
+  margin: 5px;
+  color: var(--primary-green-color);
+  background-color: white;
+  height: 34px;
+  border: 3px solid var(--primary-green-color);
+  border-radius: 8px;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Arial";
+}
 
-  .submitButton:hover {
-    background-color: var(--secondary-green-color);
-    border: 2px solid var(--secondary-green-color);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
+.submitButton:hover {
+  color: var(--button-text-color);
+  background-color: var(--secondary-green-color);
+  border: 2px solid white;
+}
 
-  .cancelButton {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin: 5px;
-    color: var(--button-text-color);
-    background: var(--primary-red-color);
-    height: 34px;
-    border: 2px solid var(--primary-red-color);
-    border-radius: 5px;
-    text-align: center;
-    font-family: "Arial";
-  }
+.cancelButton {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 5px;
+  color: var(---primary-red-color);
+  background: white;
+  height: 34px;
+  border: 3px solid var(--primary-red-color);
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Arial";
+}
 
-  .cancelButton:hover {
-    background-color: var(--secondary-red-color);
-    border: 2px solid var(--secondary-red-color);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
+.cancelButton:hover {
+  color: var(--button-text-color);
+  background-color: var(--secondary-red-color);
+  border: 2px solid white;
+}

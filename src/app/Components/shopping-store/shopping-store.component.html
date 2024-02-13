@@ -1,1 +1,15 @@
-<p>shopping-store works!</p>,
+<div class="bookShelf">
+  <div *ngFor="let book of bookservice.books">
+    <div class="bookShelfItem">
+      <div class="bookShelfItemAutor">
+        {{ book.Autor }}
+      </div>
+      <div>
+        {{ book.Title }}
+      </div>
+      <div class="buttonBar">
+        <div class="cart" (click)="addToCart(book)"></div>
+      </div>
+    </div>
+  </div>
+</div>

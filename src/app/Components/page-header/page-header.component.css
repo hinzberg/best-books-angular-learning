@@ -1,58 +1,89 @@
 .pageMain {
-    width: 100%;
-    height: 90px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: inherit;
-    position: relative;
-  }
+  width: 100%;
+  height: 90px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: inherit;
+  position: relative;
+}
 
-  .navigationBar {
-    height: 60px;
-    text-align: center;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-top: 2px solid #007aff;;
-    border-bottom: 2px solid #007aff;;
-    backdrop-filter: blur(10px);
-    background-color: #007aff20;
-  }
+.group {
+  display: flex;
+  flex-flow: row;
+}
 
- .navigationLink {
-    background-color: 007aff;
-    color: #007aff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    border-left: 1px solid #007aff;
-    border-right: 1px solid #007aff;
-    border-top: 0px;
-    border-bottom: 0px;
-    height: 30px; 
-    padding-left: 15px; 
-    padding-right: 15px; 
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 400;
-    line-height: 150%;
-    font-family: "Arial";
-    font-size: 1.7em;
- } 
+.group:hover .navigationItem {
+  font-style: italic;  
+  color: white;
+}
 
- .navigationLink:hover {
+.group:hover .cart {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 -960 960 960' width='32' %3E%3Cpath d='M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z'/%3E%3C/svg%3E");
+}
+
+.navigationBar {
+  height: 60px;
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 2px solid #007aff;
+  border-bottom: 2px solid #007aff;
+  backdrop-filter: blur(10px);
+  background-color: #007aff20;
+}
+
+.navigationItem {
+  background-color: 007aff;
+  color: #007aff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-top: 0px;
+  border-bottom: 0px;
+  height: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: "Arial";
+  font-size: 1.7em;
+}
+
+.navigationLink {
+  background-color: 007aff;
+  color: #007aff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #007aff;
+  border-right: 1px solid #007aff;
+  border-top: 0px;
+  border-bottom: 0px;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: "Arial";
+  font-size: 1.7em;
+}
+
+.navigationLink:hover {
   color: white;
   font-style: italic;
- }
+}
 
- .navigationLinkRight {
-  color: #007aff;;
+.navigationLinkRight {
+  color: #007aff;
   text-align: center;
   display: flex;
   align-items: center;
@@ -61,28 +92,34 @@
   border-top: 0px;
   border-bottom: 0px;
   font-size: 1.7rem;
-  height: 30px; 
-  padding-left: 15px; 
-  padding-right: 15px; 
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
   text-decoration: none;
   font-weight: 400;
   line-height: 150%;
   font-family: "Arial";
-} 
+}
 
-.navigationLinkRight:hover {
+.navigationLinkRight:hover{
   color: white;
   font-style: italic;
- }
+}
 
- .cart {
+.cart {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23007aff' viewBox='0 -960 960 960' width='32' %3E%3Cpath d='M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  width: 32px;
- }
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+}
 
- .cart:hover {
+.cart:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 -960 960 960' width='32' %3E%3Cpath d='M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z'/%3E%3C/svg%3E");
- }
+}

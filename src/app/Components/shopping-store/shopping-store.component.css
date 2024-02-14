@@ -26,11 +26,28 @@
 
 .bookShelfItemAutor {
   font-size: 1rem;
+  margin-top: 5px;
+}
+
+.bookShelfItemTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Arial";
+  margin-top: 5px;
+}
+
+.bookShelfItemPrice {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Arial";
+  margin-top: 8px;
+  margin-right: 10px;
 }
 
 .buttonBar {
   display: flex;
   justify-content: right;
+  margin-top: 15px;
 }
 
 .cart {

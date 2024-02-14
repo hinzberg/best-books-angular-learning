@@ -8,13 +8,13 @@ import { Book } from '../Classes/Book'
 export class BookService {
 
   books = [
-    new Book("Foundation", "Asimov, Isaac", "3-453-07988-4", 450),
-    new Book("Rendezvous with Rama", "Clark, Arthur C.", "8-808-40483-2", 310),
-    new Book("The dying Earth", "Vance, Jack", "1-946-18452-9", 250),
-    new Book("Dune", "Herbert, Frank", "3-555-74837-5", 650),
-    new Book("War of the Worlds", "Wells, H.G.", "1-277-18988-3", 210),
-    new Book("The Demolished Man", "Bester, Alfred", "7-483-28911-9", 195),
-    new Book("Ender's Game", "Scott Card, Orson", "6-845-18927-6", 195),
+    new Book("Foundation", "Asimov, Isaac", "3-453-07988-4", 450, 29.99),
+    new Book("Rendezvous with Rama", "Clark, Arthur C.", "8-808-40483-2", 310, 9.49),
+    new Book("The dying Earth", "Vance, Jack", "1-946-18452-9", 250, 9.88),
+    new Book("Dune", "Herbert, Frank", "3-555-74837-5", 650, 14.99),
+    new Book("War of the Worlds", "Wells, H.G.", "1-277-18988-3", 210, 6.50),
+    new Book("The Demolished Man", "Bester, Alfred", "7-483-28911-9", 195, 6.80),
+    new Book("Ender's Game", "Scott Card, Orson", "6-845-18927-6", 195, 12.50),
    // new Book("Fahrenheit 451", "Bradbury, Ray", "2-227-48372-4", 225),
    // new Book("The Hitchhiker's Guide", "Adams, Douglas", "4-828-54324-4", 295),
    // new Book("Hyperion", "Simmons, Dan", "1-123-99573-3", 295)

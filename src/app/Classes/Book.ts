@@ -5,12 +5,14 @@ export class Book {
     ISBN: string;
     NumberOfPages: number
     Id : string
+    Price : number
 
-    constructor(title: string, autor: string, isbn: string, pages: number) {
+    constructor(title: string, autor: string, isbn: string, pages: number, price : number) {
         this.Autor = autor;
         this.Title = title;
         this.ISBN = isbn;
-        this.NumberOfPages = pages
+        this.NumberOfPages = pages;
+        this.Price = price;
         this.Id = this.generateGUID();
     }
 

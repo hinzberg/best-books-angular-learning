@@ -24,7 +24,8 @@ export class BookEntryComponent {
     title : new FormControl('', [Validators.required]),
     autor : new FormControl('', [Validators.required]),
     isbn :new FormControl('', [Validators.required]),
-    pages : new FormControl('', [Validators.required])
+    pages : new FormControl('', [Validators.required]),
+    price : new FormControl('', [Validators.required]),
   });
   
   constructor(public bookservice : BookService , public router : Router, private activatedRoute : ActivatedRoute) {
@@ -37,6 +38,7 @@ export class BookEntryComponent {
         this.checkoutForm.controls['title'].setValue(this.selectedBook.Title);
         this.checkoutForm.controls['isbn'].setValue(this.selectedBook.ISBN);
         this.checkoutForm.controls['pages'].setValue(String(this.selectedBook.NumberOfPages));
+        this.checkoutForm.controls['price'].setValue(String(this.selectedBook.Price));
         this.addButtonText = "Update";
       }
     }  
@@ -56,9 +58,11 @@ export class BookEntryComponent {
     let isbn = this.checkoutForm.value.isbn;
     let pages = this.checkoutForm.value.pages;
     let pa = Number(pages!)
+    let price = this.checkoutForm.value.price;
+    let pr = Number(price!);
     
     // Lazy Validation. More to add
-    if(isNaN(pa) || pages === "" )
+    if(isNaN(pa) || pages === "" || price === "")
     {
       this.message = "Error";
     }
@@ -69,25 +73,27 @@ export class BookEntryComponent {
         this.selectedBook.Title = title!;
         this.selectedBook.ISBN = isbn!;
         this.selectedBook.NumberOfPages = pa;
+        this.selectedBook.Price = pr;
         this.bookservice.addOrUpdate(this.selectedBook);
       } else {
-        let book = new Book(title!, autor!, isbn!, pa);
+        let book = new Book(title!, autor!, isbn!, pa, pr);
         this.bookservice.addOrUpdate(book);
       }
       
       this.message = "";
-      this.router.navigate(['']);
+      this.router.navigate(['all-books']);
     }
   }
   
   cancel() {
-    this.router.navigate(['']);
+    this.router.navigate(['all-books']);
   }
 }
 
 interface EntryForm {
-  title : FormControl<string | null>;
-  autor : FormControl<string | null>;
-  isbn : FormControl<string | null>;
-  pages : FormControl<string | null>;
+  title: FormControl<string | null>;
+  autor: FormControl<string | null>;
+  isbn: FormControl<string | null>;
+  pages: FormControl<string | null>;
+  price: FormControl<string | null>;
 }

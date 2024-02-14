@@ -4,10 +4,13 @@
       <div class="bookShelfItemAutor">
         {{ book.Autor }}
       </div>
-      <div>
+      <div class="bookShelfItemTitle">
         {{ book.Title }}
       </div>
       <div class="buttonBar">
+         <div class="bookShelfItemPrice">
+          {{ book.Price | currency:'EUR'  }}
+         </div>
         <div class="cart" (click)="addToCart(book)"></div>
       </div>
     </div>

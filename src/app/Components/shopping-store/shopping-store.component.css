@@ -2,10 +2,10 @@
   text-align: center;
   margin: 10px;
   padding: 10px;
+  display: grid;
   background-color: transparent;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  grid-template-columns: auto auto auto;
 }
 
 .bookShelfItem {
@@ -21,7 +21,6 @@
   backdrop-filter: blur(1px);
   text-align: center;
   width: 300px;
-  display: inline-block;  
 }
 
 .bookShelfItemAutor {

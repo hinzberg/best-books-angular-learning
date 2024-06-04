@@ -1,10 +1,14 @@
 <div class="parentContainer">
+  <app-drawer-panel [isOpen]="false" header="This is the Header">
+    <div class="drawerContent">This is some nice content</div>
+    <div class="drawerContent">Only visible when open</div>
+  </app-drawer-panel>
 
-    <app-drawer-panel [isOpen]="false" header="This is the Header">
-        <div class="drawerContent">This is some nice content</div>
-        <div class="drawerContent">Only visible when open</div>    
-    </app-drawer-panel>
+  <div class="childContainer">Playground works.<br />Content area</div>
 
-<div class="childContainer">Playground works.<br/>Content area</div>
-
+  <app-rolldown-panel [isOpen]="false" header="This is the Header">
+    <div class="drawerContent">This is some nice content</div>
+    <div class="drawerContent">Only visible when open</div>
+    <div class="drawerContent">Hello World</div>
+  </app-rolldown-panel>
 </div>

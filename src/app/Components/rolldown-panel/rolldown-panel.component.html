@@ -1,0 +1,9 @@
+<div class="rollout-content">
+  <div class="rollout-header">
+    <button (click)="toggle()" icon="chevron-double-right" size="large">
+      @if(isOpen) { Close } @else { Open }
+    </button>
+    {{ header }}
+  </div>
+  @if(isOpen) { <ng-content/> }
+</div>

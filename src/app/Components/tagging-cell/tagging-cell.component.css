@@ -1,0 +1,23 @@
+.cell {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #ccffcc;
+    width: 150px;
+    border: 1px solid #585858;
+    margin: 10px;
+}
+
+.cellValidationIndicatorGreen {
+    background-color: green;
+    width: 4px;
+}
+
+.cellValidationIndicatorRed {
+    background-color: red;
+    width: 4px;
+}
+
+.cellContent {
+    justify-self: right;            
+    margin-right: 5px;
+}

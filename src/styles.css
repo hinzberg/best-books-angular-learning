@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   --primary-color: #007aff;
+  --primary-background-color: white;
   --primary-green-color: green;
   --secondary-green-color: darkgreen;
   --primary-red-color: #ff3b30;
@@ -11,7 +12,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(233, 233, 255);
+  background-color: var(--primary-background-color);
   background-image: url("assets/images/bluebackground2.jpg");
 }
 

@@ -1,0 +1,16 @@
+<div class="drawer" [class.open]="isOpen">
+  <div class="drawer-header">
+    {{header}}
+    <button (click)="toggle()" icon="chevron-double-right" size="large">Close</button>
+  </div>
+  <ng-content></ng-content>
+</div>
+
+<ng-template [ngIf]="!isOpen">
+  <div class="side-panel">
+    <button (click)="toggle()"  icon="chevron-double-left" size="large">Open</button>
+    <div class="side-panel-text">
+      {{header}}
+    </div>
+  </div>
+</ng-template>

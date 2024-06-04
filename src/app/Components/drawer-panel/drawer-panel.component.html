@@ -1,7 +1,8 @@
 <div class="drawer" [class.open]="isOpen">
   <div class="drawer-header">
-    {{header}}
     <button (click)="toggle()" icon="chevron-double-right" size="large">Close</button>
+    {{header}}
+    
   </div>
   <ng-content></ng-content>
 </div>

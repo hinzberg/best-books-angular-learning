@@ -15,6 +15,7 @@
 
 .childContainer {
     padding: 10px;
+    margin: 5px;
     margin-left: 10px;
     background-color: white;
     font-size: 1.4rem;
@@ -23,5 +24,5 @@
     width: 400px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
-    border-radius: 15px;
+    border-radius: var(--primary-corner-radius);    
 }

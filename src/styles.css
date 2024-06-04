@@ -8,6 +8,8 @@ body {
   --secondary-red-color: darkred;
   --button-text-color: white;
   
+  --primary-corner-radius: 5px;
+
   margin: 0;
   padding: 0;
   height: 100%;

@@ -8,7 +8,11 @@ import { TaggingCellComponent } from './Components/tagging-cell/tagging-cell.com
 import { PlaygroundComponent } from './Components/playground/playground.component';
 
 export const routes: Routes = [
-  { path: '', component: PlaygroundComponent },
+  // The path with an empty name is the default page and will be
+  // loaded outmatically at startup.
+  { path: '', component: BookEntryComponent },
+
+  //{ path: '', component: PlaygroundComponent },
   // { path: '', component: ShoppingStoreComponent },
   // { path: '', component: TaggingCellComponent },
   { path: 'playground', component: PlaygroundComponent },

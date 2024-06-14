@@ -7,7 +7,6 @@ body {
   --primary-red-color: #ff3b30;
   --secondary-red-color: darkred;
   --button-text-color: white;
-  
   --primary-corner-radius: 5px;
 
   margin: 0;
@@ -44,9 +43,19 @@ input {
   color: black;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
-  padding-left: 10px;
   outline: none;
   height: 28px;
+}
+
+select {
+  font-size: 1.2rem;
+  margin: 5px;
+  color: black;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+  height: 28px;
+  width: 95%;
 }
 
 .genericButton {

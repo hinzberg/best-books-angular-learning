@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  --primary-color: #007aff;
+  --primary-color: #6667AB;
   --primary-background-color: white;
-  --primary-green-color: green;
-  --secondary-green-color: darkgreen;
-  --primary-red-color: #ff3b30;
-  --secondary-red-color: darkred;
+  --primary-green-color: #4B9B69;
+  --secondary-green-color: #476A30;
+  --primary-red-color: #E63E62;
+  --secondary-red-color: #8B559B;
   --button-text-color: white;
+  --primary-text-color: #28282d;
   --primary-corner-radius: 5px;
 
   margin: 0;
@@ -35,6 +36,15 @@ h2 {
   line-height: 150%;
   margin: 0;
   font-family: "Arial";
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  color: var(--primary-text-color);
+  margin-left: 10px;
+  margin-top: 10px;    
 }
 
 input {
@@ -80,8 +90,8 @@ select {
 .submitButton {
   font-size: 1.2rem;
   margin: 5px;
-  color: var(--primary-green-color);
-  background-color: white;
+  color: white;
+  background-color: var(--primary-green-color);
   height: 34px;
   border: 3px solid var(--primary-green-color);
   border-radius: 8px;
@@ -100,8 +110,8 @@ select {
   font-size: 1.2rem;
   font-weight: 400;
   margin: 5px;
-  color: var(---primary-red-color);
-  background: white;
+  color: white;
+  background-color: var(--primary-red-color);
   height: 34px;
   border: 3px solid var(--primary-red-color);
   border-radius: 8px;

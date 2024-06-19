@@ -2,6 +2,6 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #007aff;
+    background-color: var(--primary-color);
     height: 10px;
 }

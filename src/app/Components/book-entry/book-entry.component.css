@@ -24,20 +24,10 @@
   backdrop-filter: blur(10px);
 }
 
-  form {
+form {
     margin-top: 20px;
     backdrop-filter: blur(12px);
   }
-
-
-label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  display: flex;
-  color: black;
-  margin-left: 10px;
-  margin-top: 10px;    
-}
 
 .messageLabel {
   font-size: 1.2rem;

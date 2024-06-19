@@ -24,7 +24,7 @@ export class BookEntryComponent {
   public categories = BookCategories.categories;
 
   checkoutForm = new FormGroup<EntryForm>({
-    title: new FormControl('ee', [Validators.required]),
+    title: new FormControl('', [Validators.required]),
     autor: new FormControl('', [Validators.required]),
     isbn: new FormControl('', [Validators.required]),
     pages: new FormControl('', [Validators.required]),
@@ -60,10 +60,12 @@ export class BookEntryComponent {
 
   onSubmit() {
 
+    /*
     if (this.checkoutForm.valid === false) {
       this.message = 'Form incomplete!';
       return;
     }
+    */
 
     let title = this.checkoutForm.value.title;
     let autor = this.checkoutForm.value.autor;
@@ -72,6 +74,9 @@ export class BookEntryComponent {
     let pa = Number(pages!);
     let price = this.checkoutForm.value.price;
     let pr = Number(price!);
+    let cat = this.checkoutForm.value.bookCategory;
+
+    this.message = cat!.category;
 
     // Lazy Validation. More to add
     if (isNaN(pa) || pages === '' || price === '') {
@@ -83,6 +88,8 @@ export class BookEntryComponent {
         this.selectedBook.ISBN = isbn!;
         this.selectedBook.NumberOfPages = pa;
         this.selectedBook.Price = pr;
+        this.selectedBook.Category = cat!;
+                
         this.bookservice.addOrUpdate(this.selectedBook);
       } else {
         let book = new Book(title!, autor!, isbn!, pa, pr);

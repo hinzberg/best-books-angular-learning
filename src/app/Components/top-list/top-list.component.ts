@@ -3,16 +3,13 @@ import { BookService } from '../../Services/book.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-book-shelf',
+  selector: 'app-top-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './book-shelf.component.html',
-  styleUrl: './book-shelf.component.css'
+  templateUrl: './top-list.component.html',
+  styleUrl: './top-list.component.css',
 })
 
-export class BookShelfComponent {
-
-  constructor(public bookservice : BookService ) {
-  }
-
+export class TopListComponent {
+  constructor(public bookservice: BookService) {}
 }

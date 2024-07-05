@@ -1,16 +1,12 @@
-<div class="bookShelf">
-
-<div  *ngFor="let book of bookservice.filterdBooks">
-
-<div class="bookShelfItem">
-    <div>
+<div class="bookShelf" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let book of bookservice.topBooks" cdkDrag>
+    <div class="bookShelfItem" cdkDragHandle>
+      <div>
         {{ book.Title }}
-    </div> 
-    <div class="bookShelfItemAutor">
+      </div>
+      <div class="bookShelfItemAutor">
         {{ book.Autor }}
-    </div>     
-</div>
-
-</div>
-
+      </div>
+    </div>
+  </div>
 </div>

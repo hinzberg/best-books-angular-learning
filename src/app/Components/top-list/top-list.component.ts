@@ -9,7 +9,7 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
-import { Book } from '../../Classes/Book';
+
 
 @Component({
   selector: 'app-top-list',

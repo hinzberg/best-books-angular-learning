@@ -13,7 +13,10 @@ import { ShoppingService } from '../../Services/shopping.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingStoreComponent {
-  constructor(public bookservice: BookService, public shoppingservice : ShoppingService) {}
+  constructor(
+    public bookservice: BookService,
+    public shoppingservice: ShoppingService
+  ) {}
 
   addToCart(book: Book) {
     // alert(`Added to cart\n${book.Title} by ${book.Autor}`);

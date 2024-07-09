@@ -31,6 +31,9 @@ export class BookService {
 
   isFiltered: boolean = false;
 
+  booksInStock = this.books;
+  booksToReorder : Book[] = [];
+
   constructor() {}
 
   add(book: Book) {

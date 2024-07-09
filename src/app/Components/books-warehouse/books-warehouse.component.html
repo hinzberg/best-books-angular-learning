@@ -1,0 +1,43 @@
+<h3 class="section">Books in Stock</h3>
+
+<div
+  class="bookShelf"
+  cdkDropList
+  #stockList="cdkDropList"
+  [cdkDropListData]="stock"
+  [cdkDropListConnectedTo]="[reorderList]"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let book of stock" cdkDrag>
+    <div class="bookShelfItem">
+      <div class="bookShelfItemAutor">
+        {{ book.Autor }}
+      </div>
+      <div class="bookShelfItemTitle">
+        {{ book.Title }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 class="section">Books to Reorder</h3>
+
+<div
+  class="bookShelf"
+  cdkDropList
+  #reorderList="cdkDropList"
+  [cdkDropListData]="reorder"
+  [cdkDropListConnectedTo]="[stockList]"
+  (cdkDropListDropped)="drop($event)"
+>
+  <div *ngFor="let book of reorder" cdkDrag>
+    <div class="bookShelfItem">
+      <div class="bookShelfItemAutor">
+        {{ book.Autor }}
+      </div>
+      <div class="bookShelfItemTitle">
+        {{ book.Title }}
+      </div>
+    </div>
+  </div>
+</div>

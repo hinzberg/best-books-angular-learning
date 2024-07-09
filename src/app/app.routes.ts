@@ -6,6 +6,7 @@ import { ShoppingStoreComponent } from './Components/shopping-store/shopping-sto
 import { TaggingCellComponent } from './Components/tagging-cell/tagging-cell.component';
 import { PlaygroundComponent } from './Components/playground/playground.component';
 import { TopListComponent } from './Components/top-list/top-list.component';
+import { BooksWarehouseComponent } from './Components/books-warehouse/books-warehouse.component';
 
 export const routes: Routes = [
   // The path with an empty name is the default page and will be
@@ -22,4 +23,5 @@ export const routes: Routes = [
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'shopping-store', component: ShoppingStoreComponent },
   { path: 'top-list', component: TopListComponent },
+  { path: 'warehouse', component: BooksWarehouseComponent },
 ];

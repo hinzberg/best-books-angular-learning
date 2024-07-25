@@ -20,9 +20,6 @@ import { Book } from '../../Classes/Book';
 export class BooksWarehouseComponent {
   constructor(public bookservice: BookService) {}
 
-  stock = this.bookservice.booksInStock
-  reorder = this.bookservice.booksToReorder
-
   drop(event: CdkDragDrop<Book[]>) {
     if (event.previousContainer === event.container) {
       // Reorder items within the same list

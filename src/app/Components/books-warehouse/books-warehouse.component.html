@@ -4,11 +4,11 @@
   class="bookShelf"
   cdkDropList
   #stockList="cdkDropList"
-  [cdkDropListData]="stock"
+  [cdkDropListData]="bookservice.booksInStock"
   [cdkDropListConnectedTo]="[reorderList]"
   (cdkDropListDropped)="drop($event)"
 >
-  <div *ngFor="let book of stock" cdkDrag>
+  <div *ngFor="let book of bookservice.booksInStock" cdkDrag>
     <div class="bookShelfItem">
       <div class="bookShelfItemAutor">
         {{ book.Autor }}
@@ -26,11 +26,11 @@
   class="bookShelf"
   cdkDropList
   #reorderList="cdkDropList"
-  [cdkDropListData]="reorder"
+  [cdkDropListData]="bookservice.booksToReorder"
   [cdkDropListConnectedTo]="[stockList]"
   (cdkDropListDropped)="drop($event)"
 >
-  <div *ngFor="let book of reorder" cdkDrag>
+  <div *ngFor="let book of bookservice.booksToReorder" cdkDrag>
     <div class="bookShelfItem">
       <div class="bookShelfItemAutor">
         {{ book.Autor }}

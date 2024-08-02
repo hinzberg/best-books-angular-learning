@@ -2,15 +2,15 @@
   <div class="contentBorder">
     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
       <label for="title">Title</label>
-      <input type="text" id="title" placeholder="" formControlName="title" />
-      <label for="autor">Autor</label>
-      <input type="text" id="autor" placeholder="" formControlName="autor" />
+      <input type="text" id="title" placeholder="" formControlName="title" data-cy="title-input"/>
+      <label for="autor">Author</label>
+      <input type="text" id="autor" placeholder="" formControlName="autor" data-cy="author-input" />
       <label for="isbn">ISBN</label>
-      <input type="text" id="isbn" placeholder="" formControlName="isbn" />
+      <input type="text" id="isbn" placeholder="" formControlName="isbn" data-cy="isbn-input" />
       <label for="pages">Number of Pages</label>
-      <input type="number" id="pages" placeholder="" formControlName="pages" />
+      <input type="number" id="pages" placeholder="" formControlName="pages" data-cy="pages-input" />
       <label for="price">Price</label>
-      <input type="number" id="price" placeholder="" formControlName="price" />
+      <input type="number" id="price" placeholder="" formControlName="price" data-cy="price-input" />
       <label for="category">Category</label>
       <select formControlName="bookCategory">
         <option *ngFor="let cate of categories" [ngValue]="cate">

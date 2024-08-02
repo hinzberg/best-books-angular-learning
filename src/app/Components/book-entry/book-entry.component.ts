@@ -89,7 +89,7 @@ export class BookEntryComponent {
         this.selectedBook.NumberOfPages = pa;
         this.selectedBook.Price = pr;
         this.selectedBook.Category = cat!;
-                
+
         this.bookservice.addOrUpdate(this.selectedBook);
       } else {
         let book = new Book(title!, autor!, isbn!, pa, pr);

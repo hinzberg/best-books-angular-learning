@@ -20,8 +20,9 @@
   margin-top: 50px;
   border-radius: 20px;
   border: 2px solid white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(10px);
+  width: 400px;
 }
 
 form {
@@ -34,16 +35,23 @@ form {
   font-weight: 600;
   color: red;
   margin-left: 10px;
-  margin-top: 10px;    
+  margin-top: 10px;
 }
 
-.submitButton { 
-  width: 45%;
+.submitButton {
+  width: 35%;
 }
 
 .cancelButton {
-  width: 45%;
+  width: 35%;
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
 
 

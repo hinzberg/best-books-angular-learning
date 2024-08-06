@@ -10,8 +10,8 @@ import { BooksWarehouseComponent } from './Components/books-warehouse/books-ware
 
 export const routes: Routes = [
   // The path with an empty name is the default page and will be
-  // loaded outmatically at startup.
-  { path: '', component: TopListComponent },
+  // loaded automatically at startup.
+  { path: '', component: BookEntryComponent },
 
   //{ path: '', component: PlaygroundComponent },
   // { path: '', component: ShoppingStoreComponent },

@@ -37,4 +37,9 @@ export class Book {
       }
     );
   }
+
+  public static Sample() : Book {
+    var book = new Book("Title Sample", "Author Sample", "000-111-222-333", 444, 9.99);
+    return book;
+  }
 }

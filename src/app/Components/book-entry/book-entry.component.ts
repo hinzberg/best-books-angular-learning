@@ -8,20 +8,24 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { BookCategories } from '../../Classes/BookCategories';
 import { BookCategory } from '../../Classes/BookCategory';
-import { log } from 'console';
+import { BookEntryCompletionComponent } from "./book-entry-completion/book-entry-completion/book-entry-completion.component";
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-book-entry',
   standalone: true,
-  imports: [FormsModule, CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [FormsModule, BookEntryCompletionComponent, CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './book-entry.component.html',
   styleUrl: './book-entry.component.css',
 })
 export class BookEntryComponent {
+
   private selectedBook?: Book = undefined;
   public addButtonText = 'Add Book';
-
   public categories = BookCategories.categories;
+
+  @Input()
+  public bookSuccessVisible : boolean;
 
   checkoutForm = new FormGroup<EntryForm>({
     title: new FormControl('', [Validators.required]),
@@ -35,8 +39,11 @@ export class BookEntryComponent {
   constructor(
     public bookservice: BookService,
     public router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private changeDetectorRef : ChangeDetectorRef,
   ) {
+    this.bookSuccessVisible = false;
+
     let id = this.activatedRoute.snapshot.params['bookId'];
     if (id !== undefined) {
       this.selectedBook = bookservice.getById(id);
@@ -53,19 +60,11 @@ export class BookEntryComponent {
         this.addButtonText = 'Update';
       }
     }
-    //log("hallo word");
   }
 
   public message: string = '';
 
-  onSubmit() {
-
-    /*
-    if (this.checkoutForm.valid === false) {
-      this.message = 'Form incomplete!';
-      return;
-    }
-    */
+  submit() {
 
     let title = this.checkoutForm.value.title;
     let autor = this.checkoutForm.value.autor;
@@ -97,12 +96,18 @@ export class BookEntryComponent {
       }
 
       this.message = '';
-      this.router.navigate(['all-books']);
+      this.showBookSuccess();
+
+      //this.router.navigate(['all-books']);
     }
   }
 
   cancel() {
-    this.router.navigate(['all-books']);
+    this.bookSuccessVisible = true;
+  }
+
+  private showBookSuccess () {
+    this.bookSuccessVisible = true;
   }
 }
 

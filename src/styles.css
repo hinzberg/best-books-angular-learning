@@ -54,34 +54,40 @@ label {
   font-weight: 600;
   display: flex;
   color: var(--primary-text-color);
-  margin-left: 10px;
-  margin-top: 10px;    
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 input {
   font-size: 1.2rem;
-  margin: 5px;
+  margin-top: 5px;
   color: black;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   outline: none;
   height: 28px;
+  width: 100%;
 }
 
 select {
   font-size: 1.2rem;
-  margin: 5px;
+  margin-top: 5px;
   color: black;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
   outline: none;
   height: 28px;
-  width: 95%;
+  width: 100%;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box;
 }
 
 .genericButton {
   font-size: 1.2rem;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: var(--primary-color);
   background-color: white;
   height: 34px;
@@ -89,7 +95,6 @@ select {
   border-radius: 8px;
   font-weight: 400;
   text-align: center;
-  font-family: "Arial";
 }
 
 .genericButton:hover {
@@ -100,7 +105,8 @@ select {
 
 .submitButton {
   font-size: 1.2rem;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: white;
   background-color: var(--primary-green-color);
   height: 34px;
@@ -120,7 +126,8 @@ select {
 .cancelButton {
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: white;
   background-color: var(--primary-red-color);
   height: 34px;

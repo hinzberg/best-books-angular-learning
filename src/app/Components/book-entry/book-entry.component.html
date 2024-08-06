@@ -1,6 +1,7 @@
 <div class="grayDiv">
   <div class="contentBorder">
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="checkoutForm" >
+      <h2>Enter new book here</h2>
       <label for="title">Title</label>
       <input type="text" id="title" placeholder="" formControlName="title" data-cy="title-input"/>
       <label for="autor">Author</label>
@@ -17,11 +18,13 @@
           {{ cate.category }}
         </option>
       </select>
-      <p>
-        <button class="cancelButton" (click)="cancel()">Cancel</button>
-        <button class="submitButton" type="submit">{{ addButtonText }}</button>
+      <p class="buttonContainer">
+        <button class="cancelButton" (click)="cancel()">Clear</button>
+        <button class="submitButton" (click)="submit()">{{ addButtonText }}</button>
       </p>
     </form>
   </div>
-  <p class="messageLabel">{{ message }}</p>
+  @if(this.bookSuccessVisible) { <app-book-entry-completion/> } @else {
+    <h2>Goodbye</h2>
+  }
 </div>

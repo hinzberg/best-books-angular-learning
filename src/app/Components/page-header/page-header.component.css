@@ -26,17 +26,18 @@
 }
 
 .navigationBar {
-  height: 60px;
+  height: 70px;
   text-align: center;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-top: 2px solid var(--primary-color);
-  border-bottom: 2px solid var(--primary-color);
+  background-color:transparent;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   backdrop-filter: blur(10px);
-  background-color: #007aff20;
 }
 
 .navigationItem {

@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  --primary-color: #6667AB;
+  --primary-color: #6667ab;
   --primary-background-color: white;
-  --primary-green-color: #4B9B69;
-  --secondary-green-color: #476A30;
-  --primary-red-color: #E63E62;
-  --secondary-red-color: #8B559B;
+  --primary-green-color: #4b9b69;
+  --secondary-green-color: #476a30;
+  --primary-red-color: #e63e62;
+  --secondary-red-color: #8b559b;
   --button-text-color: white;
   --primary-text-color: #28282d;
   --primary-corner-radius: 5px;
@@ -38,7 +38,6 @@ h2 {
   font-family: "Arial";
 }
 
-
 h3 {
   font-size: 1.5em;
   color: var(--primary-color);
@@ -47,7 +46,6 @@ h3 {
   margin: 0;
   font-family: "Arial";
 }
-
 
 label {
   font-size: 1.2rem;
@@ -78,10 +76,10 @@ select {
   outline: none;
   height: 28px;
   width: 100%;
-  -ms-box-sizing:content-box;
-  -moz-box-sizing:content-box;
-  -webkit-box-sizing:content-box;
-  box-sizing:content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .genericButton {
@@ -119,8 +117,8 @@ select {
 
 .submitButton:hover {
   color: var(--button-text-color);
-  background-color: var(--secondary-green-color);
   border: 2px solid white;
+  background-color: var(--secondary-green-color);
 }
 
 .cancelButton {

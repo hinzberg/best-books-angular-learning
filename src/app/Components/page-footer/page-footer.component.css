@@ -2,6 +2,12 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: var(--primary-color);
     height: 10px;
+    background-color:transparent;
+    border-top: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    backdrop-filter: blur(10px);
 }
+
+
+

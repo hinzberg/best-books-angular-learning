@@ -1,17 +1,47 @@
 <div class="grayDiv">
   <div class="contentBorder">
-    <form [formGroup]="checkoutForm" >
+    <form [formGroup]="checkoutForm">
       <h2>Enter new book here</h2>
       <label for="title">Title</label>
-      <input type="text" id="title" placeholder="" formControlName="title" data-cy="title-input"/>
+      <input
+        type="text"
+        id="title"
+        placeholder=""
+        formControlName="title"
+        data-cy="title-input"
+      />
       <label for="autor">Author</label>
-      <input type="text" id="autor" placeholder="" formControlName="autor" data-cy="author-input" />
+      <input
+        type="text"
+        id="autor"
+        placeholder=""
+        formControlName="autor"
+        data-cy="author-input"
+      />
       <label for="isbn">ISBN</label>
-      <input type="text" id="isbn" placeholder="" formControlName="isbn" data-cy="isbn-input" />
+      <input
+        type="text"
+        id="isbn"
+        placeholder=""
+        formControlName="isbn"
+        data-cy="isbn-input"
+      />
       <label for="pages">Number of Pages</label>
-      <input type="number" id="pages" placeholder="" formControlName="pages" data-cy="pages-input" />
+      <input
+        type="number"
+        id="pages"
+        placeholder=""
+        formControlName="pages"
+        data-cy="pages-input"
+      />
       <label for="price">Price</label>
-      <input type="number" id="price" placeholder="" formControlName="price" data-cy="price-input" />
+      <input
+        type="number"
+        id="price"
+        placeholder=""
+        formControlName="price"
+        data-cy="price-input"
+      />
       <label for="category">Category</label>
       <select formControlName="bookCategory">
         <option *ngFor="let cate of categories" [ngValue]="cate">
@@ -20,11 +50,13 @@
       </select>
       <p class="buttonContainer">
         <button class="cancelButton" (click)="cancel()">Clear</button>
-        <button class="submitButton" (click)="submit()">{{ addButtonText }}</button>
+        <button class="submitButton" (click)="submit()">
+          {{ addButtonText }}
+        </button>
       </p>
     </form>
   </div>
-  @if(this.bookSuccessVisible) { <app-book-entry-completion/> } @else {
-    <h2>Goodbye</h2>
+  @if(this.bookSuccessVisible) { <app-book-entry-completion /> } @else {
+  <h2>{{this.message}}</h2>
   }
 </div>

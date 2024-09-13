@@ -1,6 +1,13 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Book } from '../../Classes/Book';
-import { FormBuilder, FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormsModule,
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BookService } from '../../Services/book.service';
@@ -8,24 +15,29 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { BookCategories } from '../../Classes/BookCategories';
 import { BookCategory } from '../../Classes/BookCategory';
-import { BookEntryCompletionComponent } from "./book-entry-completion/book-entry-completion/book-entry-completion.component";
+import { BookEntryCompletionComponent } from './book-entry-completion/book-entry-completion/book-entry-completion.component';
 import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-book-entry',
   standalone: true,
-  imports: [FormsModule, BookEntryCompletionComponent, CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [
+    FormsModule,
+    BookEntryCompletionComponent,
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+  ],
   templateUrl: './book-entry.component.html',
   styleUrl: './book-entry.component.css',
 })
 export class BookEntryComponent {
-
   private selectedBook?: Book = undefined;
   public addButtonText = 'Add Book';
   public categories = BookCategories.categories;
 
   @Input()
-  public bookSuccessVisible : boolean;
+  public bookSuccessVisible: boolean;
 
   checkoutForm = new FormGroup<EntryForm>({
     title: new FormControl('', [Validators.required]),
@@ -40,7 +52,7 @@ export class BookEntryComponent {
     public bookservice: BookService,
     public router: Router,
     private activatedRoute: ActivatedRoute,
-    private changeDetectorRef : ChangeDetectorRef,
+    private changeDetectorRef: ChangeDetectorRef
   ) {
     this.bookSuccessVisible = false;
 
@@ -65,7 +77,6 @@ export class BookEntryComponent {
   public message: string = '';
 
   submit() {
-
     let title = this.checkoutForm.value.title;
     let autor = this.checkoutForm.value.autor;
     let isbn = this.checkoutForm.value.isbn;
@@ -79,7 +90,7 @@ export class BookEntryComponent {
 
     // Lazy Validation. More to add
     if (isNaN(pa) || pages === '' || price === '') {
-      this.message = 'Error';
+      this.message = 'Error Validating Input';
     } else {
       if (this.selectedBook !== undefined) {
         this.selectedBook.Autor = autor!;
@@ -94,19 +105,17 @@ export class BookEntryComponent {
         let book = new Book(title!, autor!, isbn!, pa, pr);
         this.bookservice.addOrUpdate(book);
       }
-
       this.message = '';
       this.showBookSuccess();
-
-      //this.router.navigate(['all-books']);
     }
   }
 
   cancel() {
-    this.bookSuccessVisible = true;
+    this.message = '';
+    this.bookSuccessVisible = false;
   }
 
-  private showBookSuccess () {
+  private showBookSuccess() {
     this.bookSuccessVisible = true;
   }
 }
